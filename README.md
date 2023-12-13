@@ -31,3 +31,13 @@ This app is intentionally disconnected from a live API. It leverages limited moc
 3. Run the app: `npm start`
 
 Feel free to experiment, explore, and enhance BookHaven! Happy coding!
+
+## Wireframes
+
+#### Mobile 
+
+![mobile](https://github.com/Hekimianz/bookhaven/assets/97762477/3dd98ab1-57fc-4752-9997-ff6a06f525b1)
+
+#### Desktop
+![Desktop](https://github.com/Hekimianz/bookhaven/assets/97762477/8c31d853-1aa6-422a-9cf3-627b1fab6853)
+
