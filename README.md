@@ -5,7 +5,8 @@ Welcome to BookHaven, a fictional bookstore app created for the sole purpose of 
 ## Features
 
 - **Browse Catalog:** Explore a curated catalog of books with diverse genres and themes.
-- **Category Filters:** Navigate through the catalog using predefined categories such as 'Top Rated,' 'Classic Literature,' and more.
+- 
+- **Category Sections:** Discover books organized into themed sections such as 'Top Rated,' 'Classic Literature,' and more.
 
 - **Search Functionality:** Find specific titles quickly using the search bar.
 
