@@ -1,0 +1,23 @@
+.nav {
+  height: 75px;
+  width: 100vw;
+  background-color: #e6b17e;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 200px;
+}
+
+.nav span {
+  padding: 0 20px;
+  font-size: 0.2em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: none;
+  }
+}

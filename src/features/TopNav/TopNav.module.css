@@ -1,0 +1,107 @@
+.nav {
+  height: 100px;
+  width: 100%;
+  background-color: #e6b17e;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3d1d18;
+}
+
+.mobileMenuIcon {
+  font-size: 2.5em;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.logoTitle {
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+  font-size: 2em;
+  margin-left: 10px;
+  color: #3d1d18;
+  text-decoration: none;
+}
+
+.fullOverlay {
+  position: absolute;
+  width: 1024px;
+  height: 2000px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.mobileMenu {
+  height: 300px;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #3d1d18;
+  color: #fed0a4;
+  border-bottom-left-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 15px;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.mobileMenu_itemActive {
+  text-decoration: underline;
+  color: #fed0a4;
+}
+
+.mobileMenu_itemNotActive {
+  text-decoration: none;
+  color: #fed0a4;
+}
+
+.mobileMenu span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.desktopNav {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.desktopNav_itemActive {
+  text-decoration: underline;
+  color: #3d1d18;
+}
+.desktopNav_itemNotActive {
+  color: #3d1d18;
+  text-decoration: none;
+}
+
+.desktopNav_item:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .desktopNav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobileMenu,
+  .fullOverlay,
+  .mobileMenuIcon {
+    display: none;
+  }
+}
