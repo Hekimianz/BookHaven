@@ -1,0 +1,72 @@
+.cardCont {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #bfa98e;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.author {
+  font-size: 0.8em;
+  margin-top: -5px;
+}
+
+.bookCover {
+  width: 70%;
+  align-self: center;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.price {
+  margin: 0;
+  font-size: 1em;
+}
+
+.bookDetails {
+  display: flex;
+  align-items: center;
+}
+
+.starIcon {
+  font-size: 0.8em;
+  margin-left: auto;
+}
+
+.buyBtn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: rgb(251, 242, 230);
+  color: #40352b;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1600px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .author {
+    font-size: 1.3em;
+  }
+
+  .bookDetails {
+    font-size: 1.3em;
+  }
+
+  .cardCont {
+    padding: 30px;
+  }
+}

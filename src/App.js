@@ -3,13 +3,14 @@ import BottomNav from "./features/BottomNav/BottomNav";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styles from "./App.module.css";
 import About from "./Pages/About/About";
+import Home from "./Pages/Home/Home";
 function App() {
   return (
     <BrowserRouter>
       <TopNav />
       <div className={styles.test}>
         <Routes>
-          <Route path="/" element={<div>home</div>} />
+          <Route path="/" element={<Home />} />
           <Route path="/trending" element={<div>trending</div>} />
           <Route path="/topRated" element={<div>top rated</div>} />
           <Route path="/discounts" element={<div>discounts</div>} />

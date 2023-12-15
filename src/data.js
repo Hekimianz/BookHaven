@@ -401,7 +401,7 @@ const booksData = [
   },
   {
     title: "Jane Eyre",
-    author: { first: "Jane", last: "Eyre", full: "Jane Eyre" },
+    author: { first: "Charlotte", last: "Brontë", full: "Charlotte Brontë" },
     genres: [
       "Fiction",
       "Romance",
