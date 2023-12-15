@@ -1,0 +1,15 @@
+.cont {
+  font-family: "Afacad", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 99px;
+  color: #47290e;
+}
+
+hr {
+  border: 0.7px solid rgba(0, 0, 0, 0.5);
+}

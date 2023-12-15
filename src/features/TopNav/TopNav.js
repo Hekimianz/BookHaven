@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import styles from "./TopNav.module.css";
 import { toggleMobileMenu, getMobileMenuStatus } from "./TopNavSlice";
 import { useSelector, useDispatch } from "react-redux";
@@ -92,7 +91,6 @@ const TopNav = () => {
         {/* Toggle Menu For Mobile */}
         {useSelector(getMobileMenuStatus) ? mobileMenu : null}
       </nav>
-      <Outlet />
     </>
   );
 };

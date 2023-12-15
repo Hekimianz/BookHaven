@@ -14,10 +14,20 @@
   padding: 0 20px;
   font-size: 0.2em;
   cursor: pointer;
+  color: #47290e;
+}
+.fullOverlay {
+  position: fixed;
+  top: 0;
+  width: 1024px;
+  height: 2000px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 @media screen and (min-width: 1024px) {
-  .nav {
+  .nav,
+  .fullOverlay {
     display: none;
   }
 }
