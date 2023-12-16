@@ -26,6 +26,11 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   margin-bottom: 10px;
+  transition: 0.2s all;
+}
+
+.bookCover:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .price {
@@ -64,6 +69,11 @@
 
   .bookDetails {
     font-size: 1.3em;
+  }
+
+  .bookCover {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .cardCont {

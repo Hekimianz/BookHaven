@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  row-gap: 40px;
   width: 100%;
   justify-items: center;
   margin: 20px 10px;
@@ -10,7 +11,8 @@
 
 @media screen and (min-width: 1600px) {
   .homeCont {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 100px;
+    margin: 20px 40px;
   }
 }
