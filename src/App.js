@@ -4,7 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styles from "./App.module.css";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
+import SearchResults from "./Pages/SearchResults/SearchResults";
+import { getResults } from "./features/Search/SearchSlice";
+import { useSelector } from "react-redux";
 function App() {
+  const results = useSelector(getResults);
   return (
     <BrowserRouter>
       <TopNav />
@@ -16,6 +20,7 @@ function App() {
           <Route path="/discounts" element={<div>discounts</div>} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<div>cart</div>} />
+          <Route path="/results" element={<SearchResults data={results} />} />
         </Routes>
       </div>
       <BottomNav />

@@ -1,9 +1,16 @@
 import styles from "./TopNav.module.css";
-import { toggleMobileMenu, getMobileMenuStatus } from "./TopNavSlice";
+import {
+  toggleMobileMenu,
+  getMobileMenuStatus,
+  toggleDesktopSearch,
+  getDesktopSearchStatus,
+} from "./TopNavSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { setSearch } from "../Search/SearchSlice";
 const TopNav = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const classNameFuncDesktop = ({ isActive }) =>
     isActive ? styles.desktopNav_itemActive : styles.desktopNav_itemNotActive;
@@ -59,6 +66,39 @@ const TopNav = () => {
     </div>
   );
 
+  const desktopSearch = (
+    <li>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          dispatch(toggleDesktopSearch());
+          navigate("/results");
+        }}
+      >
+        <input
+          className={
+            useSelector(getDesktopSearchStatus)
+              ? styles.desktopSearchShown
+              : styles.desktopSearchHidden
+          }
+          type="text"
+          placeholder="Search book"
+          onChange={(e) => dispatch(setSearch(e.target.value))}
+        />
+        <button
+          className={
+            useSelector(getDesktopSearchStatus)
+              ? styles.desktopSearchBtnShown
+              : styles.desktopSearchBtnHidden
+          }
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </li>
+  );
+
   return (
     <>
       <nav className={styles.nav}>
@@ -81,6 +121,13 @@ const TopNav = () => {
           <NavLink to="/cart" className={classNameFuncDesktop}>
             Cart
           </NavLink>
+          {desktopSearch}
+          <span
+            onClick={() => dispatch(toggleDesktopSearch())}
+            className={"material-symbols-outlined " + styles.desktopSearchIcon}
+          >
+            search
+          </span>
         </ul>
         <span
           onClick={() => dispatch(toggleMobileMenu())}

@@ -98,6 +98,61 @@
   transform: scale(1.1);
 }
 
+.desktopSearchIcon {
+  cursor: pointer;
+  transition: 0.2s all;
+  padding: 10px;
+  user-select: none;
+}
+
+.desktopSearchIcon:hover {
+  transform: rotate(45deg);
+}
+
+.desktopSearchHidden {
+  width: 0px;
+  height: 0px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  transition: 0.2s all;
+}
+
+.desktopSearchShown {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  transition: 0.2s all;
+}
+
+.desktopSearchBtnHidden {
+  border: none;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  font-size: 0px;
+  pointer-events: none;
+  transition: 0s all;
+  margin-left: 10px;
+}
+
+.desktopSearchBtnShown {
+  transition: 0.1s all;
+  margin-left: 10px;
+  color: #e6b17e;
+  background-color: #47290e;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.desktopSearchBtnShown:hover {
+  color: #47290e;
+  background-color: #fefae0;
+}
+
 @media screen and (max-width: 1024px) {
   .desktopNav {
     display: none;
