@@ -154,6 +154,17 @@
   background-color: #fefae0;
 }
 
+#cartNum {
+  color: #47290e;
+  border-radius: 50%;
+  padding: 1px 5px;
+  background-color: #fefae0;
+  font-size: 0.8em;
+  position: relative;
+  bottom: 10px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) {
   .desktopNav {
     display: none;

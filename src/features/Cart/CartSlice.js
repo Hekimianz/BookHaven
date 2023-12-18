@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const CartSlice = createSlice({
   name: "Cart",
-  initialState: { purchased: false, items: [] },
+  initialState: { items: [], purchased: false },
   reducers: {
     addToCart: (state, action) => {
       if (state.items.some((book) => book.id === action.payload.id)) {
@@ -15,8 +15,12 @@ export const CartSlice = createSlice({
         state.items.push(action.payload);
       }
     },
-    delFromCart: (state, action) =>
-      state.items.filter((book) => book.id !== action.payload),
+    delFromCart: (state, action) => {
+      return {
+        ...state,
+        items: state.items.filter((book) => book.id !== action.payload),
+      };
+    },
     changeQuantity: (state, action) => {
       state.items.forEach((book) => {
         if (book.id === action.payload.id) {
@@ -25,9 +29,9 @@ export const CartSlice = createSlice({
       });
     },
     purchase: (state) => {
-      state.items.length = 0;
+      return { items: [], purchased: true };
     },
-    togglePurchased: (state) => {
+    togglePurchase: (state) => {
       state.purchased = !state.purchased;
     },
   },
@@ -38,9 +42,16 @@ export const {
   delFromCart,
   changeQuantity,
   purchase,
-  togglePurchased,
+  togglePurchase,
 } = CartSlice.actions;
 export const getCart = (state) => state.Cart.items;
+export const getCartQuantity = (state) => {
+  let total = 0;
+  state.Cart.items.forEach((book) => {
+    total += book.quantity;
+  });
+  return total;
+};
 export const getTotal = (state) => {
   let total = 0;
   state.Cart.items.forEach((book) => {

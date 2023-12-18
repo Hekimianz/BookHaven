@@ -3,6 +3,7 @@ import { delFromCart, changeQuantity } from "../../features/Cart/CartSlice";
 import { useDispatch } from "react-redux";
 export default function CartItem(props) {
   const { title, cover, price, id, quantity } = props;
+
   const dispatch = useDispatch();
   return (
     <div className={styles.itemCont}>
@@ -32,7 +33,9 @@ export default function CartItem(props) {
       />
       <p className={styles.itemPrice}>${price}</p>
       <span
-        onClick={() => dispatch(delFromCart(id))}
+        onClick={() => {
+          dispatch(delFromCart(id));
+        }}
         className={"material-symbols-outlined " + styles.delItem}
       >
         close

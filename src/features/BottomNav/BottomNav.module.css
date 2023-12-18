@@ -12,7 +12,7 @@
 
 .nav span {
   padding: 0 20px;
-  font-size: 0.2em;
+  font-size: 0.25em;
   cursor: pointer;
   color: #47290e;
 }
@@ -23,6 +23,16 @@
   height: 2000px;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+
+#cartNum {
+  color: #e6b17e;
+  position: absolute;
+  right: 15px;
+  bottom: 18px;
+  font-size: 20px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1024px) {

@@ -1,19 +1,20 @@
 import styles from "./Cart.module.css";
 import CartItem from "../../Components/CartItem/CartItem";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   getCart,
   getTotal,
   purchase,
+  togglePurchase,
   getPurchasedStatus,
-  togglePurchased,
 } from "../../features/Cart/CartSlice";
-import { useDispatch } from "react-redux";
+
 export default function Cart() {
   const cartItems = useSelector(getCart);
   const total = useSelector(getTotal);
   const dispatch = useDispatch();
-  let purchased = false;
+  const purchased = useSelector(getPurchasedStatus);
+
   window.scrollTo(0, 0);
   const items = cartItems.map((book) => {
     return (
@@ -35,13 +36,10 @@ export default function Cart() {
         <h2 className={styles.total}>Total: ${total.toFixed(2)}</h2>
         <button
           onClick={() => {
-            purchased = true;
             dispatch(purchase());
             setTimeout(() => {
-              purchased = false;
-              console.log(purchased);
-            }, 1000);
-            console.log(purchased);
+              dispatch(togglePurchase());
+            }, 2500);
           }}
           className={styles.buyBtn}
         >
@@ -51,16 +49,19 @@ export default function Cart() {
     </>
   );
 
+  const purchaseScreen = (
+    <div className={styles.purchased}>Thank you for your purchase!</div>
+  );
+
   return (
     <div className={styles.cartCont}>
-      {purchased ? (
-        <div className={styles.purchased}>Thank you for your purchase!</div>
-      ) : null}
       {cartItems.length > 0 ? (
         cart
-      ) : !purchased ? (
+      ) : purchased ? (
+        purchaseScreen
+      ) : (
         <p className={styles.emptyCart}>Add books to your cart!</p>
-      ) : null}
+      )}
     </div>
   );
 }

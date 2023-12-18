@@ -8,9 +8,12 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { setSearch } from "../Search/SearchSlice";
+import { getCartQuantity } from "../Cart/CartSlice";
 const TopNav = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const cartQuantity = useSelector(getCartQuantity);
 
   const classNameFuncDesktop = ({ isActive }) =>
     isActive ? styles.desktopNav_itemActive : styles.desktopNav_itemNotActive;
@@ -120,6 +123,7 @@ const TopNav = () => {
           </NavLink>
           <NavLink to="/cart" className={classNameFuncDesktop}>
             Cart
+            <span id={styles.cartNum}>{cartQuantity}</span>
           </NavLink>
           {desktopSearch}
           <span

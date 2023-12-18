@@ -5,11 +5,13 @@ import {
   toggleSearch,
   getMobileSearchStatus,
 } from "../MobileSearch/MobileSearchSlice";
+import { getCartQuantity } from "../Cart/CartSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const BottomNav = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const cartItems = useSelector(getCartQuantity);
 
   return (
     <>
@@ -43,6 +45,7 @@ const BottomNav = () => {
         >
           shopping_bag
         </span>
+        <span id={styles.cartNum}>{cartItems}</span>
       </div>
     </>
   );
