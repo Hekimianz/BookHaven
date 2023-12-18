@@ -1,6 +1,9 @@
 import styles from "./Card.module.css";
+import { addToCart } from "../../features/Cart/CartSlice";
+import { useDispatch } from "react-redux";
 export default function Card(props) {
   const { title, author, id, cover, price, rating } = props;
+  const dispatch = useDispatch();
   return (
     <div className={id + " " + styles.cardCont}>
       <img src={cover} alt="book cover" className={styles.bookCover} />
@@ -15,7 +18,13 @@ export default function Card(props) {
         </span>
         <span className={styles.bookRating}>{rating}</span>
       </div>
-      <button type="button" className={styles.buyBtn}>
+      <button
+        onClick={() =>
+          dispatch(addToCart({ title, id, cover, price, quantity: 1 }))
+        }
+        type="button"
+        className={styles.buyBtn}
+      >
         Add To Cart
       </button>
     </div>

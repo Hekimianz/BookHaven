@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   color: #47290e;
+  z-index: 2;
 }
 
 .mobileMenuIcon {

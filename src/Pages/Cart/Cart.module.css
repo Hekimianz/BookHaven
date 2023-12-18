@@ -1,0 +1,70 @@
+.cartCont {
+  width: 100%;
+  margin-bottom: 99px;
+  font-family: "Roboto";
+}
+
+.emptyCart {
+  font-weight: bold;
+  text-align: center;
+  font-family: "Josefin Slab";
+}
+
+.total {
+  font-size: 20px;
+}
+
+.totalCont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.buyBtn {
+  background-color: #c0d266;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.buyBtn:hover {
+  background-color: #a2b255;
+  color: #fefae0;
+}
+.purchased {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  background-color: #e5b17d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .cartCont {
+    padding: 20px;
+  }
+
+  .emptyCart {
+    font-size: 2em;
+  }
+
+  .total {
+    font-size: 1.5em;
+  }
+}

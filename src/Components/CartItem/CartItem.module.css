@@ -1,0 +1,53 @@
+.itemCont {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+  font-family: "Afacad";
+  gap: 20px;
+  position: relative;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.itemCover {
+  width: 50px;
+}
+
+.itemTitle {
+  font-size: 16px;
+}
+
+.itemQuant {
+  margin-left: auto;
+  width: 25px;
+  text-align: center;
+}
+
+.delItem {
+  font-size: 14px;
+  margin-left: -10px;
+  color: darkred;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.delItem:hover {
+  color: red;
+  transform: scale(1.3) rotate(90deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .itemCover {
+    width: 100px;
+  }
+
+  .itemPrice,
+  .delItem {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .itemTitle {
+    font-size: 20px;
+  }
+}
