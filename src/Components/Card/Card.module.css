@@ -64,6 +64,15 @@
   color: rgb(251, 242, 230);
 }
 
+.discountedPrice {
+  text-decoration: line-through;
+}
+
+.priceWithDiscount {
+  color: rgb(212, 0, 0);
+  margin-left: 5px;
+}
+
 @media screen and (min-width: 1600px) {
   .title {
     font-size: 2em;

@@ -1,8 +1,8 @@
 import styles from "../Home/Home.module.css";
-import { getBooks } from "./TopRatedSlice";
+import { getBooks } from "./DiscountsSlice";
 import { useSelector } from "react-redux";
 import Card from "../../Components/Card/Card";
-export default function TopRated() {
+export default function Discounts() {
   const books = useSelector(getBooks).map((book) => {
     return (
       <Card

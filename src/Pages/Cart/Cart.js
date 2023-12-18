@@ -17,11 +17,14 @@ export default function Cart() {
 
   window.scrollTo(0, 0);
   const items = cartItems.map((book) => {
+    const price = book.isDiscounted ? book.discountedPrice : book.price;
+    console.log(book.discountedPrice);
+
     return (
       <CartItem
         title={book.title}
         cover={book.cover}
-        price={book.price * book.quantity}
+        price={price * book.quantity}
         id={book.id}
         quantity={book.quantity}
         key={book.id}

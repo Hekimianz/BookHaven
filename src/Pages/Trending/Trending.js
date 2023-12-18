@@ -12,6 +12,8 @@ export default function Trending() {
         cover={book.image}
         price={book.price}
         rating={book.rating}
+        isDiscounted={book.isDiscounted}
+        discountedPrice={book.discountedPrice}
         key={book.id}
       />
     );

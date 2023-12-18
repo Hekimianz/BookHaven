@@ -2,7 +2,16 @@ import styles from "./Card.module.css";
 import { addToCart } from "../../features/Cart/CartSlice";
 import { useDispatch } from "react-redux";
 export default function Card(props) {
-  const { title, author, id, cover, price, rating } = props;
+  const {
+    title,
+    author,
+    id,
+    cover,
+    price,
+    rating,
+    isDiscounted,
+    discountedPrice,
+  } = props;
   const dispatch = useDispatch();
   return (
     <div className={id + " " + styles.cardCont}>
@@ -12,7 +21,12 @@ export default function Card(props) {
         <h3 className={styles.author}>{author}</h3>
       </div>
       <div className={styles.bookDetails}>
-        <p className={styles.price}>${price}</p>
+        <p className={isDiscounted ? styles.discountedPrice : styles.price}>
+          ${price}
+        </p>
+        {isDiscounted ? (
+          <p className={styles.priceWithDiscount}>${discountedPrice}</p>
+        ) : null}
         <span className={"material-symbols-outlined " + styles.starIcon}>
           star
         </span>
@@ -20,7 +34,17 @@ export default function Card(props) {
       </div>
       <button
         onClick={() =>
-          dispatch(addToCart({ title, id, cover, price, quantity: 1 }))
+          dispatch(
+            addToCart({
+              title,
+              id,
+              cover,
+              price,
+              isDiscounted,
+              discountedPrice,
+              quantity: 1,
+            })
+          )
         }
         type="button"
         className={styles.buyBtn}

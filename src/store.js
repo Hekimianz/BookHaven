@@ -6,6 +6,7 @@ import SearchReducer from "./features/Search/SearchSlice";
 import CartReducer from "./features/Cart/CartSlice";
 import TrendingReducer from "./Pages/Trending/TrendingSlice";
 import TopRatedReducer from "./Pages/TopRated/TopRatedSlice";
+import DiscountsReducer from "./Pages/Discounts/DiscountsSlice";
 
 const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ const store = configureStore({
     Cart: CartReducer,
     Trending: TrendingReducer,
     TopRated: TopRatedReducer,
+    Discounts: DiscountsReducer,
   },
 });
 

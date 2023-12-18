@@ -2305,4 +2305,11 @@ function shuffle(array) {
 }
 shuffle(booksData);
 
+booksData.slice(0, 20).forEach((book) => (book.isDiscounted = true));
+booksData.forEach((book) => {
+  if (book.isDiscounted) {
+    book.discountedPrice = (book.price - (book.price / 100) * 25).toFixed(2);
+  }
+});
+shuffle(booksData);
 export default booksData;

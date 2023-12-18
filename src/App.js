@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home";
 import Cart from "./Pages/Cart/Cart";
 import Trending from "./Pages/Trending/Trending";
 import TopRated from "./Pages/TopRated/TopRated";
+import Discounts from "./Pages/Discounts/Discounts";
 import SearchResults from "./Pages/SearchResults/SearchResults";
 import { getResults } from "./features/Search/SearchSlice";
 import { useSelector } from "react-redux";
@@ -20,7 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/topRated" element={<TopRated />} />
-          <Route path="/discounts" element={<div>discounts</div>} />
+          <Route path="/discounts" element={<Discounts />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/results" element={<SearchResults data={results} />} />

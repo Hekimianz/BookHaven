@@ -54,8 +54,10 @@ export const getCartQuantity = (state) => {
 };
 export const getTotal = (state) => {
   let total = 0;
+
   state.Cart.items.forEach((book) => {
-    total += book.price * book.quantity;
+    let price = book.isDiscounted ? book.discountedPrice : book.price;
+    total += price * book.quantity;
   });
   return total;
 };
