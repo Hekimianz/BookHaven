@@ -4,6 +4,8 @@ import MobileSearchReducer from "./features/MobileSearch/MobileSearchSlice";
 import HomeReducer from "./Pages/Home/HomeSlice";
 import SearchReducer from "./features/Search/SearchSlice";
 import CartReducer from "./features/Cart/CartSlice";
+import TrendingReducer from "./Pages/Trending/TrendingSlice";
+import TopRatedReducer from "./Pages/TopRated/TopRatedSlice";
 
 const store = configureStore({
   reducer: {
@@ -12,6 +14,8 @@ const store = configureStore({
     Home: HomeReducer,
     Search: SearchReducer,
     Cart: CartReducer,
+    Trending: TrendingReducer,
+    TopRated: TopRatedReducer,
   },
 });
 
