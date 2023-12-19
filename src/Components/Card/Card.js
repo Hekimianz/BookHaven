@@ -1,6 +1,7 @@
 import styles from "./Card.module.css";
 import { addToCart } from "../../features/Cart/CartSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export default function Card(props) {
   const {
     title,
@@ -13,9 +14,17 @@ export default function Card(props) {
     discountedPrice,
   } = props;
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <div className={id + " " + styles.cardCont}>
-      <img src={cover} alt="book cover" className={styles.bookCover} />
+      <img
+        src={cover}
+        alt="book cover"
+        className={styles.bookCover}
+        onClick={() => {
+          navigate(`/book/${id}`);
+        }}
+      />
       <div>
         <h2 className={styles.title}>{title}</h2>
         <h3 className={styles.author}>{author}</h3>

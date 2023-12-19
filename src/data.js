@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 const booksData = [
   {
     title: "Powerless",
@@ -2281,7 +2280,7 @@ const booksData = [
 ];
 
 booksData.forEach((book) => {
-  book.id = uuidv4();
+  book.id = `${book.title[0]}${book.author.first[0]}${book.author.last[0]}-${book.pages}-${book.title[1]}${book.title[0]}`;
 });
 
 function shuffle(array) {
@@ -2311,5 +2310,6 @@ booksData.forEach((book) => {
     book.discountedPrice = (book.price - (book.price / 100) * 25).toFixed(2);
   }
 });
+
 shuffle(booksData);
 export default booksData;

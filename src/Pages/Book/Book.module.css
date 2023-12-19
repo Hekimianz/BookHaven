@@ -1,0 +1,118 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 99px;
+  font-family: "Afacad";
+  width: 75%;
+}
+
+.title {
+  font-size: 1.7em;
+  text-align: center;
+}
+
+.ratingsDet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ratings {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 0.6em;
+}
+
+.ratingsCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.starRatingCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+}
+
+.cover {
+  width: 65%;
+  max-width: 300px;
+}
+
+#starIcon {
+  font-size: 1.3em;
+  color: rgb(189, 124, 2);
+}
+
+.price,
+.discountedPrice {
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.discountedPrice {
+  color: rgb(205, 2, 2);
+}
+
+.synopsis {
+  text-align: center;
+  font-family: "Josefin Slab";
+}
+
+.genresCont {
+  font-family: "Roboto";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-size: 0.8em;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre {
+  background-color: #47290e;
+  color: #fefae0;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.buyBtn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #40352b;
+  color: rgb(251, 242, 230);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s all;
+  border: 2px solid #47290e;
+}
+
+.buyBtn:active {
+  background-color: rgb(251, 242, 230);
+  color: #40352b;
+}
+
+@media screen and (min-width: 1024px) {
+  .buyBtn:hover {
+    border: 2px solid #47290e;
+    background-color: rgb(251, 242, 230);
+    color: #40352b;
+  }
+}

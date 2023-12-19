@@ -45,7 +45,9 @@ const BottomNav = () => {
         >
           shopping_bag
         </span>
-        <span id={styles.cartNum}>{cartItems}</span>
+        <span onClick={() => navigate("/cart")} id={styles.cartNum}>
+          {cartItems}
+        </span>
       </div>
     </>
   );

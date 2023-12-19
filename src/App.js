@@ -8,6 +8,7 @@ import Cart from "./Pages/Cart/Cart";
 import Trending from "./Pages/Trending/Trending";
 import TopRated from "./Pages/TopRated/TopRated";
 import Discounts from "./Pages/Discounts/Discounts";
+import Book from "./Pages/Book/Book";
 import SearchResults from "./Pages/SearchResults/SearchResults";
 import { getResults } from "./features/Search/SearchSlice";
 import { useSelector } from "react-redux";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/results" element={<SearchResults data={results} />} />
+          <Route path="/book/:bookId" element={<Book />} />
         </Routes>
       </div>
       <BottomNav />
